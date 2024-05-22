@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import '../globals.css';
-import MineSelection from '@/Components/selection'; // Make sure to import the MineSelection component
+import MineSelection from '@/Components/selection';
 import { cn } from "@/utils/cn";
 import { Spotlight } from "@/Components/ui/Spotlight";
 const MineGamblingGame: React.FC = () => {
