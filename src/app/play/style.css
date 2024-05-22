@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-gap: 15px;
+}
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: grey 0px 5px ;
+}
+.box:hover{
+    transform: translateY(-5%);
+}
+.box.clicked {
+    background-color: #bbb;
+    transform: scale(0.9);
+}
+.box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+p{
+    font-family: 'Pixelify Sans', sans-serif;
+}
+h1{
+    font-family: 'Righteous', cursive;
+
+}
+/* mine-gambling-game.css */
+
+/* Styles for the 5x5 grid */
+.grid {
+
+
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: dimgrey 0px 5px ;
+}
+
+/* Styles for the container holding everything except the h1 */
+.content-container {
+
+    padding: 10px;
+    border-radius: 35px;
+    box-shadow: dimgrey 0px 5px ;
+}
