@@ -7,7 +7,7 @@ const mineOptions = Array.from({ length: 20 }, (_, i) => ({
     name: `${i + 1} Mines`
 }));
 
-function classNames(...classes) {
+function classNames(...classes: (string | boolean | undefined | null)[]) {
     return classes.filter(Boolean).join(' ');
 }
 

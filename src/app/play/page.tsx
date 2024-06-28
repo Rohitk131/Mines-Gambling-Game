@@ -9,7 +9,7 @@ const MineGamblingGame: React.FC = () => {
     const [clickedBoxes, setClickedBoxes] = useState<boolean[]>(Array(25).fill(false));
     const [isGameOver, setIsGameOver] = useState<boolean>(false);
     const [bombs, setBombs] = useState<number[]>([]);
-    const [selectedMines, setSelectedMines] = useState({ id: 10, name: '10 Mines' }); // Default number of mines
+    const [selectedMines, setSelectedMines] = useState({ id: 10, name: '10 Mines' });
 
     // Function to place bombs randomly
     const placeBombs = () => {
