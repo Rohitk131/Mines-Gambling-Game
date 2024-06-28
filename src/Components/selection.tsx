@@ -1,8 +1,13 @@
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
-const mineOptions = Array.from({ length: 20 }, (_, i) => ({
+interface MineOption {
+    id: number;
+    name: string;
+}
+
+const mineOptions: MineOption[] = Array.from({ length: 20 }, (_, i) => ({
     id: i + 1,
     name: `${i + 1} Mines`
 }));
@@ -11,7 +16,12 @@ function classNames(...classes: (string | boolean | undefined | null)[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-export default function MineSelection({ selectedMines, setSelectedMines }) {
+interface MineSelectionProps {
+    selectedMines: MineOption;
+    setSelectedMines: (option: MineOption) => void;
+}
+
+export default function MineSelection({ selectedMines, setSelectedMines }: MineSelectionProps) {
     return (
         <Listbox value={selectedMines} onChange={setSelectedMines}>
             {({ open }) => (
